@@ -1,0 +1,122 @@
+body {
+  margin: 0;
+}
+
+.active {
+  color: #00796bf7;
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  background-color: #BDBDBD;
+  position: absolute;
+  height: 50px;
+  width: 100%;
+}
+.navigation .logo li a {
+  font-size: 22px;
+}
+.navigation li {
+  list-style: none;
+  margin: 0;
+}
+.navigation li a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+.navigation .items {
+  display: flex;
+}
+.navigation .items form {
+  margin: 10px 50px;
+  display: flex;
+  align-item: center;
+}
+.navigation .items form input {
+  height: 20px;
+  border-radius: 5px;
+  border: none;
+  padding: 5px;
+}
+.navigation .items .menu {
+  display: flex;
+  margin: 15px 150px;
+}
+.navigation .items .menu li {
+  margin: 0 20px;
+  align-items: center;
+}
+.navigation .items .menu li .active {
+  color: #00796bf7;
+  font-weight: bold;
+}
+
+.main-content {
+  padding-top: 50px;
+  background-color: #738fd6;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.main-content .center {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  width: 300px;
+  margin-left: 100px;
+}
+.main-content .center h1 {
+  font-size: 40px;
+}
+.main-content .center button {
+  width: 150px;
+  background-color: #00796bf7;
+  color: white;
+  height: 30px;
+  border: none;
+  border-radius: 5px;
+}
+.main-content .center a {
+  color: #00796bf7;
+}
+.main-content h4 {
+  margin: 0;
+}
+
+.card-content {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.card-content .cards {
+  display: flex;
+  list-style: none;
+}
+.card-content .cards li {
+  width: 200px;
+  margin: 20px 40px;
+}
+.card-content .cards li h4 {
+  height: 30px;
+}
+.card-content .cards li p {
+  height: 80px;
+}
+.card-content .cards li button {
+  border: none;
+  color: #00796bf7;
+  width: 200px;
+  padding: 10px;
+  border-radius: 5px;
+}
+.card-content .cards li .active-button {
+  background-color: #00796bf7;
+  color: white;
+  border-radius: 5px;
+}
+
+/*# sourceMappingURL=style.css.map */
