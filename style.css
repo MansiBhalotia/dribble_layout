@@ -10,6 +10,7 @@ body {
   display: flex;
   justify-content: space-between;
   background-color: #BDBDBD;
+  align-items: center;
   position: absolute;
   height: 50px;
   width: 100%;
@@ -24,15 +25,19 @@ body {
 .navigation li a {
   text-decoration: none;
   color: black;
+}
+.navigation li a:hover {
   font-weight: bold;
 }
 .navigation .items {
   display: flex;
 }
 .navigation .items form {
-  margin: 10px 50px;
+  margin: 0 50px;
   display: flex;
-  align-item: center;
+  align-items: center;
+  justify-content: center;
+  max-width: 200px;
 }
 .navigation .items form input {
   height: 20px;
@@ -78,6 +83,7 @@ body {
   height: 30px;
   border: none;
   border-radius: 5px;
+  cursor: pointer;
 }
 .main-content .center a {
   color: #00796bf7;
@@ -95,16 +101,17 @@ body {
 .card-content .cards {
   display: flex;
   list-style: none;
+  padding: 0;
 }
 .card-content .cards li {
-  width: 200px;
+  max-width: 200px;
   margin: 20px 40px;
 }
 .card-content .cards li h4 {
   height: 30px;
 }
 .card-content .cards li p {
-  height: 80px;
+  height: 120px;
 }
 .card-content .cards li button {
   border: none;
@@ -112,11 +119,54 @@ body {
   width: 200px;
   padding: 10px;
   border-radius: 5px;
+  cursor: pointer;
+}
+.card-content .cards li button:hover {
+  background-color: grey;
 }
 .card-content .cards li .active-button {
   background-color: #00796bf7;
   color: white;
   border-radius: 5px;
+}
+.card-content .cards li .active-button:hover {
+  border: solid black 1px;
+  background-color: #00796bf7;
+}
+
+@media (max-width: 600px) {
+  .navigation .items form {
+    display: none;
+  }
+
+  .card-content .cards {
+    flex-direction: column;
+  }
+  .card-content .cards li {
+    margin-top: 20px;
+  }
+  .card-content .cards li p {
+    height: 100px;
+  }
+
+  .main-content .center {
+    margin-left: 10px;
+  }
+}
+@media (max-width: 1232px) {
+  .navigation .items .menu {
+    margin: 15px 0;
+    padding: 0;
+  }
+}
+@media (max-width: 900px) {
+  .navigation .items .menu {
+    display: none;
+  }
+
+  .card-content .cards li button {
+    width: auto;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

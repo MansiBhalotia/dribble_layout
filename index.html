@@ -3,7 +3,7 @@
 <head>
 	<title>Index</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
-    <link href="style.css" rel="stylesheet">
+    <link href="hamburgers-master/dist/hamburgers.css" rel="stylesheet">
     
 </head>
 <body>
@@ -16,17 +16,23 @@
                 </ul>
             </div>
             <div class="items">
-                <ul class="menu" >
-                    <li><a href="#" class="active">HOME</a></li>
-					<li ><a href="#" >ABOUT</a></li>
-					<li ><a href="#" >COURSES</a></li>
-                    <li ><a href="#" >EVENTS</a></li>
-                    <li ><a href="#" >BLOGS</a></li>
-                </ul>
+                <div class="menu">
+                    <li><a href="#" class="nav-link active">HOME</a></li>
+					<li ><a href="#" class="nav-link">ABOUT</a></li>
+					<li ><a href="#" class="nav-link">COURSES</a></li>
+                    <li ><a href="#" class="nav-link">EVENTS</a></li>
+                    <li ><a href="#" class="nav-link">BLOGS</a></li>
+                </div>
                 <form>
                     <input type="text" for="search" placeholder="Type something to search">
                 </form>
             </div>
+            <button class="hamburger hamburger--collapse" type="button">
+              <span class="hamburger-box">
+              <span class="hamburger-inner"></span>
+              </span>
+
+            </button>
         </nav>
     </header>
     <section class="main-content">
@@ -62,5 +68,25 @@
             </li>
         </ul>
     </section>
+    <script>
+       var x=document.querySelectorAll(".nav-link");
+       for(i=0;i<x.length;i++){
+        var x1=x[i];
+
+        x1.addEventListener("click",function(){
+            var y=document.querySelector(".nav-link.active");
+            y.classList.remove("active");
+
+            this.classList.toggle("active");
+        });
+       }
+       var hamburger=document.querySelector(".hamburger");
+        hamburger.addEventListener("click",function() {
+            hamburger.classList.toggle("is-active");
+        });
+        window.addEventListener("resize",function(){
+            hamburger.classList.remove("is-active");
+        });
+    </script>
 </body>
 </html>

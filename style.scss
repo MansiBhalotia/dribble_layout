@@ -1,3 +1,4 @@
+@import '_responsive.scss';
 body{
 	margin:0;
 }
@@ -7,10 +8,13 @@ body{
 .navigation{
 	display:flex;
 	justify-content:space-between;
-	background-color:#BDBDBD;;
+	background-color:#BDBDBD;
+	align-items:center;
 	position:absolute;
 	height:50px;
 	width:100%;
+
+   
 	.logo li a{
 	  font-size:22px;
 	}
@@ -22,16 +26,20 @@ body{
 	  a{
 	    text-decoration:none;
 	    color:black;
-	    font-weight:bold;
+	    &:hover{
+	       font-weight:bold;
+	    }
 	  }
 	}
 	.items{
 	  display:flex;
 
 	form{
-	margin:10px 50px;
+	margin:0 50px;
 	display:flex;
-	align-item:center;
+	align-items:center;
+	justify-content:center;
+	max-width:200px;
 
 	  input{
 	  height:20px;
@@ -56,6 +64,9 @@ body{
 	   }
 	}
 	}
+	.hamburger{
+      display:none;
+    }
 }
 .main-content{
 padding-top:50px;
@@ -82,6 +93,7 @@ padding-top:50px;
         height:30px;
         border:none;
         border-radius:5px;
+        cursor:pointer;
        }
        a{
        color:#00796bf7;
@@ -100,16 +112,17 @@ padding-top:50px;
 	.cards{
 	  display:flex;
 	  list-style:none;
+	  padding:0;
 
 	  li{
-	    width:200px;
+	    max-width:200px;
 	    margin:20px 40px;
 
 	    h4{
 	      height:30px;
 	    }
 	    p{
-	      height:80px;
+	      height:120px;
 	    }
 	    button{
 	      border:none;
@@ -117,14 +130,57 @@ padding-top:50px;
 	      width:200px;
 	      padding:10px;
 	      border-radius:5px;
+          cursor:pointer;
 
+          &:hover{
+            background-color:grey;
+          }
 	      
 	    }
 	    .active-button{
 	        background-color:#00796bf7;
             color:white;
             border-radius:5px;
+            &:hover{
+             border:solid black 1px;
+             background-color:#00796bf7;
+            }
 	      }
 	  }
+	}
+}
+@include for-phone-only{
+	.navigation .items form{
+	   display:none;
+	}
+	.card-content .cards{
+	     flex-direction:column;
+	 li{
+	   margin-top:20px;
+
+	   p{
+	    height:100px;
+	   }
+	}
+   }
+   .main-content .center{
+      margin-left:10px;
+   }
+}
+@include for-large-devices{
+	.navigation .items .menu{
+	   margin:15px 0;
+	   padding:0;
+	}
+}
+@include for-tablets{
+	.navigation .items .menu{
+	   display:none;
+	}
+	.navigation .hamburger{
+	  display:block;
+	}
+	.card-content .cards li button{
+	  width:auto;
 	}
 }
