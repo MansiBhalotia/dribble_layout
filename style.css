@@ -57,6 +57,9 @@ body {
   color: #00796bf7;
   font-weight: bold;
 }
+.navigation .hamburger {
+  display: none;
+}
 
 .main-content {
   padding-top: 50px;
@@ -162,6 +165,10 @@ body {
 @media (max-width: 900px) {
   .navigation .items .menu {
     display: none;
+  }
+
+  .navigation .hamburger {
+    display: block;
   }
 
   .card-content .cards li button {
